@@ -1,2 +1,2 @@
-# daily-coding
-Small puzzles everyday to keep thinking dynamically
+# Daily Coding
+Small puzzles everyday to keep thinking dynamically :)
