@@ -8,6 +8,7 @@
 # The same regular expression on the string "raymond" should return false.
 # Given the regular expression ".*at" and the string "chat", your function should return true. The same
 # regular expression on the string "chats" should return false.
+# Dynamic algorith's source: https://youtu.be/l3hda49XcDE
 
 def match_regex(string, pattern):
     check = [[False] * (len(pattern) + 1) for _ in range(len(string) + 1)]
