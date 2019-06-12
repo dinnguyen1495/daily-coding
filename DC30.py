@@ -11,16 +11,16 @@
 
 def trapped_water(walls):
     N = len(walls)
-    first, last, result = 0, N - 1, 0
+    left, right, result = 0, N - 1, 0
     for i, j in zip(range(1, N), range(N - 2, -1, -1)):
-        if walls[i] >= walls[first]:
-            if i - first > 1:
-                result += (i - first - 1) * min(walls[i], walls[first]) - sum(walls[first + 1 : i])
-            first = i
-        if walls[j] > walls[last]:
-            if last - j > 1:
-                result += (last - j - 1) * min(walls[j], walls[last]) - sum(walls[j + 1 : last])
-            last = j
+        if walls[i] >= walls[left]:
+            if i - left > 1:
+                result += (i - left - 1) * min(walls[i], walls[left]) - sum(walls[left + 1 : i])
+            left = i
+        if walls[j] > walls[right]:
+            if right - j > 1:
+                result += (right - j - 1) * min(walls[j], walls[right]) - sum(walls[j + 1 : right])
+            right = j
     return result
 
 def main():
